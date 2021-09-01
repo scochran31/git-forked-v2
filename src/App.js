@@ -1,10 +1,11 @@
 import React from 'react';
-import Nav from './components/Nav'
+import NavBar from './components/NavBar';
 import Contact from './pages/Contact';
+import Home from './pages/Home';
 import {
   ChakraProvider,
   Box,
-  Grid,
+  // Grid,
   theme,
 } from '@chakra-ui/react';
 
@@ -14,18 +15,17 @@ import {
   Route,
   // Link
 } from 'react-router-dom'
+import forked from './assets/images/forked.jpg'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
+      <Box bgImg={forked} bgPos='center' minH='100vh' h='100%' w='100%' position='sticky'>
         <Router>
-          <Nav />
+          <NavBar />
           <Switch>
-            <Grid minH="100vh" p={3}>
-              Welcome to Git Forked v2
-            </Grid>
-            <Route path='/contact'><Contact /></Route> 
+            <Route exact path='/' component={Home} />
+            <Route exact path='/contact' component={Contact} />
           </Switch>
         </Router>
       </Box>
