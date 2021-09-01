@@ -12,6 +12,7 @@ import {
   FormControl,
   FormLabel,
   Text,
+  Textarea,
 } from '@chakra-ui/react';
 
 const Contact = () => {
@@ -64,11 +65,31 @@ const Contact = () => {
               onChange={(e) => setName(e.target.value)}
               required
             />
+            <Input 
+               borderColor='gray.700'
+               borderWidth='thin'
+               variant='solid'
+               name='email'
+               value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+
+            <Textarea 
+                placeholder='Enter a message'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+
           </FormControl>
 
-          <FormControl mt='2'>
+          {/* <FormControl mt='2'>
             <Button type='submit' colorScheme='blue'>Sign Up!</Button>
-          </FormControl>
+          </FormControl> */}
+
+          <Button colorScheme="teal" variant="solid">
+            Submit
+          </Button>
 
         </form>
       </Box>
