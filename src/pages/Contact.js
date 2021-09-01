@@ -45,7 +45,7 @@ const Contact = () => {
 
 
   return(
-    <Flex justifyContent='center'>
+    <Flex mt={5} justifyContent='center'>
       <Box
        p='5vh'
        borderRadius='50px'
