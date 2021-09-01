@@ -15,12 +15,12 @@ import {
   Route,
   // Link
 } from 'react-router-dom'
-import forked from './assets/images/forked.jpg'
+import forked from './assets/images/forked.png'
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box bgImg={forked} bgPos='center' minH='100vh' h='100%' w='100%' position='sticky'>
+      <Box bgImg={forked} bgPos='top' bgSize='cover' minH='100vh' w='100vw' position='sticky'>
         <Router>
           <NavBar />
           <Switch>

@@ -13,10 +13,11 @@ import {
   FormLabel,
   Text,
   Textarea,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 const Contact = () => {
-
+  const color = useColorModeValue('whiteAlpha.700', 'blackAlpha.700')
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -50,7 +51,7 @@ const Contact = () => {
        borderRadius='50px'
        shadow='md'
        borderWidth='2px'
-       bgColor='whiteAlpha.700'
+        bgColor={color}
       >
         <Text fontSize='3xl'>Contact Us!</Text>
         <form onSubmit={handleSubmit}>
@@ -76,8 +77,11 @@ const Contact = () => {
             />
 
             <Textarea 
-                placeholder='Enter a message'
+              borderColor='gray.700'
+              borderWidth='thin'
+              placeholder='Enter a message'
               value={message}
+              bgColor='white'
               onChange={(e) => setMessage(e.target.value)}
             />
 

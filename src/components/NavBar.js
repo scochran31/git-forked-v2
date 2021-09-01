@@ -1,9 +1,11 @@
 import React from 'react'
 import { ColorModeSwitcher } from '../ColorModeSwitcher'
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react'
 import NavMenu from './NavMenu'
 
 function Nav() {
+    const color = useColorModeValue('whiteAlpha.700', 'blackAlpha.700')
+
     return (
         <Flex
             h={150}
@@ -12,7 +14,7 @@ function Nav() {
             fontSize='36px'
             justify='space-between'
             p={5}
-            backgroundColor='gray.500'
+            backgroundColor={color}
             align='center'
         >
             <Box>
