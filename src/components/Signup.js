@@ -1,5 +1,6 @@
 // import React, {useState} from 'react'
 import React, { useRef } from 'react';
+import { auth } from '../firebase/auth';
 
 import{
   Flex,
